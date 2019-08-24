@@ -1,0 +1,101 @@
+.center {
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%
+}
+#tickets {
+	text-align:center;
+}
+.center-right{
+	
+}
+#form-container{
+	/*background-color: green;*/
+}
+.container {
+	font-family: 'Roboto Slab', serif;
+
+}
+/* .carousel {
+	height:100px;
+} */
+body {
+	background-image: url("../../../laptop.jpg");
+}
+
+.jumbotron {
+	opacity: .2;
+}
+.form-check-label, .nav-link{
+	color: black;
+	font-style: bold;
+	background-color: azure;
+}
+
+.nav-link {
+	opacity: .6;
+
+}
+.nav {
+	border-bottom:10px;
+	margin-bottom:20px;
+}
+.jumbotron {
+	opacity:1;
+	font-size:25px;
+}
+
+.expand-description-btn, .description-panel{
+	margin-bottom:15px;	
+	/*padding:10px,10px,10px,10px; */
+}
+
+.small-border-box {
+	width:100px;
+	display:inline-block;
+}
+.ticket-panel{
+	margin:20px,20px;
+	display:inline-block;
+}
+.description {
+	/* padding:20px,20px; */
+}
+/*.approve-deny-btn {
+	margin-bottom: 15px;
+	margin-left:10px
+	margin-top: 25px;
+} */
+.fancy-radios{
+	/* margin: 10px,10px,10px,10px; */
+	margin-left:10px;
+}
+.ticket-btns {
+	/* margin:10px,10px; */
+	margin-left:10px;
+
+}
+.box-text{
+	font-size:14px;
+}
+.ticket-description-panel{
+	margin-left:130px;
+}
+.ticket-info{
+	width:100px;
+}
+.desc-btn {
+	margin-top:10px;
+}
+.panel {
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.btn-group-toggle{
+	width:100%;
+	/*margin-left: 50px;*/
+}
+body {
+	background-image: url("../images/autumn-mug.jpg");
+}

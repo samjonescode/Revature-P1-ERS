@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ERS Registration</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	<div class="container"> 
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="http://localhost:8080/TestProj/html/register.html">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="add-new-ticket"href="http://localhost:8080/TestProj/html/Login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:8080/TestProj/html/employee-view-2.html">Employee View</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="http://localhost:8080/TestProj/html/finance-manager.html">Finance Manager View</a>
+            </li> 
+        </ul>
+	
+    <div class="jumbotron text-center"> Welcome Employee </div>
+    
+	
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary center" data-toggle="modal" data-target="#exampleModal">
+    Request Reimbursement
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form id="reimbursementForm">
+                <div class="form-group">
+                  <label for="usernameInput">Describe the reason for the reimbursement</label>
+              <textarea name="reimbursement-text" id="descriptionInput" cols="50" rows="10"> Description goes here</textarea>    
+                </div>
+                
+               
+                <div class="form-group">
+                  <!-- <label for="firstnameInput">First Name</label> -->
+                  <input type="number" name="firstnameInput" class="form-control" id="reimbursement-amount" aria-describedby="Amount" placeholder="Amount in USD" required>
+                  
+                  
+                </div>
+                <!-- <div class="row"> -->
+                  <div class="col-lg-10">
+                    <div class="row">
+                      <div class="btn-group-toggle radios" data-toggle="buttons">
+                        <label class="btn btn-success active fancy-radios" value = 0 id="option1">
+                          <input type="radio" name="options" class="fancy-radios" value=0 autocomplete="off"> Lodging
+                        </label>
+                        <label class="btn btn-success fancy-radios" value=1 id="option2">
+                          <input type="radio" class="fancy-radios" name="options" value=1 autocomplete="off"> Travel
+                        </label>
+                        <label class="btn btn-success fancy-radios" value=1 id="option3">
+                          <input type="radio" class="fancy-radios" name="options" value=2 autocomplete="off"> Food
+                          </label>
+                          <label class="btn btn-success fancy-radios" value=1 id="option4">
+                              <input type="radio" class="fancy-radios" name="options" value=3 autocomplete="off"> Other
+                            </label>
+                          </div>
+                        </div>
+                        <br>  
+              
+                    </div>
+                    
+              
+        </div>
+        <div class="modal-footer">
+            <button type="submit center" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary center">Submit</button>
+                    </form>
+        </div>
+      </div>
+    </div>
+  </div>
+	<!-- <div id="form-container" class="col-lg-8 center"> -->
+<!-- 
+      <div class="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Modal body text goes here.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+<!-- <form id="reimbursementForm">
+  <div class="form-group">
+    <label for="usernameInput">Describe the reason for the reimbursement</label>
+<textarea name="reimbursement-text" id="descriptionInput" cols="95" rows="10"> Description goes here</textarea>    
+  </div>
+   -->
+ 
+  <!-- <div class="form-group">
+  	<input type="number" name="firstnameInput" class="form-control" id="reimbursement-amount" aria-describedby="Amount" placeholder="Amount" required>
+    
+    
+  </div>
+    <div class="col-lg-8 center">
+      <div class="row">
+        <div class="row btn-group-toggle radios" data-toggle="buttons">
+          <label class="btn btn-success active fancy-radios" value = 0 id="option1">
+            <input type="radio" name="options" class="fancy-radios" value=0 autocomplete="off"> Lodging
+          </label>
+          <label class="btn btn-success fancy-radios" value=1 id="option2">
+            <input type="radio" class="fancy-radios" name="options" value=1 autocomplete="off"> Travel
+          </label>
+          <label class="btn btn-success fancy-radios" value=1 id="option3">
+            <input type="radio" class="fancy-radios" name="options" value=2 autocomplete="off"> Food
+            </label>
+            <label class="btn btn-success fancy-radios" value=1 id="option4">
+                <input type="radio" class="fancy-radios" name="options" value=3 autocomplete="off"> Other
+              </label>
+            </div>
+          </div>
+          <br>  
+
+      </div>
+        <button type="submit center" class="btn btn-primary center">Submit</button>
+      </form> -->
+    <!-- </div> -->
+</div>
+    <div class="col-lg-8 center" id="tickets"></div>
+  </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
+<script type="text/javascript" src="../javascript/employee-view.js"></script>
+<script type="module" src="hover_modules.js"> </script>
+</body>
+</html>
