@@ -8,8 +8,8 @@
  
 </head>
 <body>
-	<div class="main-container"> 
-	<div class="container text-center">
+	<div class="centered-content-container" style="text-align:center;"> 
+	<div class="container text-center" style="text-align:center">
       
       <ul class="nav justify-content-center">
           <li class="nav-item">
@@ -21,15 +21,14 @@
          
         </ul>
 	
-    <div class="jumbotron text-center"> Register </div>
+    <div class="jumbotron text-center col-lg-4"> Register </div>
     
 	</div>
 
 	<div id="form-container" class="col-lg-4 center">
 <form id="registerForm" action="Register.do" method="POST">
   <div class="form-group">
-    <!-- <label for="usernameInput">Username</label> -->
-  	<input type="text" name="usernameInput" class="form-control" id="usernameInput" aria-describedby="username" placeholder="Enter username" required>
+   <input type="text" name="usernameInput" class="form-control" id="usernameInput" aria-describedby="username" placeholder="Enter username" required>
     
   </div>
   
@@ -66,7 +65,7 @@
   	I am a finance manager.
   </label> -->
   <!-- <div class="row"> -->
-    <div class="center col-lg-6">
+    <!-- <div class="center col-lg-6">
 
       <div class="row btn-group-toggle radios" data-toggle="buttons">
         <label class="btn btn-success active fancy-radios" value = 0 id="option1">
@@ -78,10 +77,10 @@
         <!-- </div> -->
         
         <!-- </div> -->
-      </div>
+      </div> -->
     </div>
       <br>  
-      <button type="submit center" class="btn btn-primary col-lg-6 center">Submit</button>
+      <button type="submit center" class="btn btn-primary col-lg-3 center">Submit</button>
 </form>
 </div>
   </div>

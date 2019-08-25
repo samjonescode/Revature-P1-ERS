@@ -154,36 +154,39 @@ function getSubmissionDate(timestamp){
 		let status = "";
 		let statusEle = ``;
 		for(i=0;i<array.length;i++){
-			let submittedAt = getSubmissionDate(array[i].submitted); 
+			let submittedAt = new Date(array[i].submitted); 
+			console.log(new Date(array[i].submitted))
 //			let submittedAt = timeConverter(array[i].submitted);
 
 			if(array[i].statusId=="0"){
 					status = "Pending";
-					statusEle = `<div class='border border-warning small-border-box'> ${status} </div> `;
+					statusEle = `<button class="btn btn-warning expand-description-btn rounded desc-btn collapsed" data-toggle="collapse" data-target="#${'panel' + i}" aria-expanded="false">${status}</button>`
+						
 				} else if(array[i].statusId=="1") {
 					status = "Approved";
-					statusEle = `<div class='border border-success small-border-box'> ${status} </div> `;
-					
+					statusEle = `<button class="btn btn-success expand-description-btn rounded desc-btn collapsed" data-toggle="collapse" data-target="#${'panel' + i}" aria-expanded="false">${status}</button>`
+						
 				} else {
 					status = "Denied"
-						statusEle = `<div class='border border-danger small-border-box'> ${status} </div> `;
+//						statusEle = `<div class='border border-danger small-border-box'> ${status} </div> `;
+					statusEle = `<button class="btn btn-danger expand-description-btn rounded desc-btn collapsed" data-toggle="collapse" data-target="#${'panel' + i}" aria-expanded="false">${status}</button>`
 					
 				}
 		 
-			
+			//<button  class="btn btn-warning expand-description-btn rounded desc-btn" data-toggle="collapse" data-target = "#${'panel' + i}"> Details </button>
+            
 			let card = `    <div class="card center text-center col-lg-10 panel" style="width: 60rem">
                 <small> Reimbursement </small>
             <div class="card-body text-center">
             ${statusEle}
-			       <button  class="btn btn-warning expand-description-btn rounded desc-btn" data-toggle="collapse" data-target = "#${'panel' + i}"> Details </button>
-                <form action="Update.do" method="POST">
+			         <form action="Update.do" method="POST">
 			<input type="hidden" name="reimbIdInput" value='${array[i].reimbId}'> 
 			      
                 <div style="height:30px" class="text-center collapse description-panel" id="${'panel' + i}"> 
                         <div class="container text-center">
                         <div class="row text-center">
-                        <div class="col-md-1">
-                        <div class="ticket-info border border-success">
+                        <div class="col-md-3">
+                        <div class="border border-success">
                         <div class="card-title small-border-box box-text col-sm">
 					Author ID: ${array[i].author}
 					<hr>
@@ -210,7 +213,7 @@ function getSubmissionDate(timestamp){
                          </div>
 				<div class="modal-footer" style="text-align:center;">
 				
-				<input type="submit" style="display:inline-block;"class="btn btn-primary center"> Submit
+				<input type="submit" style="display:inline-block;"class="btn btn-primary center" value="Submit"> 
 				</div>
                     </div>   
 				</form>

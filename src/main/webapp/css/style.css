@@ -15,7 +15,7 @@
 }
 .container {
 	font-family: 'Roboto Slab', serif;
-
+	text-align: center;
 }
 /* .carousel {
 	height:100px;
@@ -24,9 +24,7 @@ body {
 	background-image: url("../../../laptop.jpg");
 }
 
-.jumbotron {
-	opacity: .2;
-}
+
 .form-check-label, .nav-link{
 	color: black;
 	font-style: bold;
@@ -44,6 +42,7 @@ body {
 .jumbotron {
 	opacity:1;
 	font-size:25px;
+	display:inline-block;
 }
 
 .expand-description-btn, .description-panel{
@@ -79,9 +78,7 @@ body {
 .box-text{
 	font-size:14px;
 }
-.ticket-description-panel{
-	margin-left:130px;
-}
+
 .ticket-info{
 	width:100px;
 }
