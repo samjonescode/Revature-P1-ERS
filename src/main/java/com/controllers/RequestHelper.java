@@ -21,6 +21,8 @@ public class RequestHelper {
 			return FinanceManagerController.FindAllTickets(req,res);
 		case "/TestProj/html/Update.do":
 			return FinanceManagerController.UpdateTicket(req);
+//		case "/TestProj/html/ChangeView.do":
+//			return FinanceManagerController.ChangeView(req,res);
 		default:
 			return "/html/Login.html";
 		}

@@ -62,6 +62,15 @@ public static String UpdateTicket(HttpServletRequest request) {
 	
 	return "/html/finance-manager.html";
 }
+
+//public static String ChangeView(HttpServletRequest request, HttpServletResponse response) {
+//	
+//}
 //public static String ApproveTicket()
 //public static ... DenyTicket
+
+//public void sendEmail(String emailAddress) {
+//	String em = "samuelriley1393@gmail.com";
+//	
+//}
 }

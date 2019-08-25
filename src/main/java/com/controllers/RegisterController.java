@@ -1,12 +1,14 @@
 package com.controllers;
 
+
+
 import javax.servlet.http.HttpServletRequest;
 
 import com.dao.UserDAOImpl;
 import com.models.User;
 
 public class RegisterController {
-	
+//	final static Logger log = Logger.getLogger("RegisterController.class");
 	public static String Register(HttpServletRequest request) {
 		
 		//Integer userId = null;
@@ -26,6 +28,7 @@ public class RegisterController {
 		
 		UserDAOImpl udi = new UserDAOImpl();
 		udi.createUser(user);
+//		log.info("New employee " + user.getUserName() + " has registered.");
 		
 		return "/html/Login.html";
 		

@@ -1,7 +1,11 @@
 window.onload = function(e){
+//	var tickets = getTickets();
 	getTickets();
 	getUserInfo();
 }
+
+
+
 
 function getUserInfo(){
 	let xhr = new XMLHttpRequest();
@@ -30,12 +34,14 @@ function getTickets(){
 			tickets = (JSON.parse(tickets))
 //			console.log(tickets.length)
 			appendReimbursement(tickets);
+			
+			return tickets;
 		}
 	}
 }
 let form = document.getElementById("reimbursementForm")
-let fancyRadios = document.getElementsByClassName("fancy-radios")
-function getFancyRadios(){
+let radios = document.getElementsByClassName("radios")
+function getFancyRadios(fancyRadios){
     let checked=""
     for(i=0;i<fancyRadios.length;i++){
       if(fancyRadios[i].checked){
@@ -105,12 +111,17 @@ function addListeners(){
 	  let status ="";
 	  let statusEle;
 	  for(i=0; i<tickets.length;i++){
+		  console.log(tickets[i].statusId);
 		  if(tickets[i].statusId=="0"){
 				status = "Pending";
-				statusEle = `<div class='border border-danger small-border-box'> ${status} </div> `;
-			} else {
+				statusEle = `<div class='border border-warning small-border-box'> ${status} </div> `;
+			} else if(tickets[i].statusId=="1") {
 				status = "Approved";
-				statusEle = `<div class='border border-primary small-border-box'> ${status} </div> `;
+				statusEle = `<div class='border border-success small-border-box'> ${status} </div> `;
+				
+			} else {
+				status = "Denied"
+					statusEle = `<div class='border border-danger small-border-box'> ${status} </div> `;
 				
 			}
 		  let date = ts.toDateString(tickets[i].submitted)
@@ -134,7 +145,7 @@ function addListeners(){
 		  let ticketArea = document.getElementById("tickets")
 //		  ticketArea.innerHTML = longCard;
 //		  ticketArea.prepend(longCard);
-		  ticketArea.insertAdjacentHTML('beforebegin', longCard );
+		  ticketArea.insertAdjacentHTML('afterbegin', longCard );
 		  
 	  }
 
@@ -148,4 +159,18 @@ function addListeners(){
 	  document.getElementById("userid").innerHTML = user.userId;
 
   }
+  
+  // from the web
+  function timeConverter(UNIX_timestamp){
+	  var a = new Date(UNIX_timestamp * 1000);
+	  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+	  var year = a.getFullYear();
+	  var month = months[a.getMonth()];
+	  var date = a.getDate();
+	  var hour = a.getHours();
+	  var min = a.getMinutes();
+	  var sec = a.getSeconds();
+	  var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+	  return time;
+	}
   

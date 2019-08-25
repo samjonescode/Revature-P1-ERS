@@ -20,29 +20,49 @@
           
         </ul>
             <div class="jumbotron text-center card-link" > Welcome Finance Manager </div>
+                <div class="col-lg-10">
+                    <div class="row text-center">
+                      <div class="btn-group-toggle radios" style="display:inline-block;"data-toggle="buttons">
+                      
+                            <button class="btn btn-success" id="viewAll"> View All </button>
+                      
+                             <button class="btn btn-success" id="viewPending"> View Pending </button>
+                      
+                          <button class="btn btn-success" id="viewApproved"> View Approved </button>
+                             <button class="btn btn-success" id="viewDenied"> View Denied </button>
+                      
+                          </div>
+                        </div>
+                        <br>  
+              
+                    </div>
+   
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+                   <!-- <div class="row"> -->
+              
+                    
+              
+        </div>
+        <div class="modal-footer">
+            <button type="submit center" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary center">Submit</button>
+                  
+        </div>
+      </div>
+            
+         </div> 
+         </div> <!-- End modal -->  
             <div id="ticketDiv">
-    <!--          <div class="card center text-center col-lg-10 " style="width: 60rem">
-                <small> Reimbursements </small>
-            <div class="card-body">
-                <div class="card-title">
-                    Type: Lodging Employee: Sam Jones
-
-                </div>
-                Amount: $400
             </div>
-                <button  class="btn btn-primary expand-description-btn rounded" data-toggle="collapse" data-target = "#description"> View Description</button>
-                <div style="height:30px" class="collapse description-panel col-lg-12" id="description"> 
-                        <div class="row center">
-                                <p class="border border-success description">Stayed five nights at a four seasons hotel in Dubai completing a project.</p>
-                        
-                        <button class="btn btn-danger approve-deny-btn"> Deny </button> <button class="btn btn-success approve-deny-btn"> Approve </button>
-                    </div>   
-                
-                </div>
-            </div>
-            </div>-->
-            </div>
-            <!-- </div> -->
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

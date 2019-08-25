@@ -1,12 +1,15 @@
 package com.controllers;
 
+
+
 import javax.servlet.http.HttpServletRequest;
 
 import com.dao.UserDAOImpl;
 import com.models.User;
 
 public class LoginController {
-	
+//	final static Logger log = Logger.getLogger("LoginController.class");
+
 	public static String Login(HttpServletRequest request) {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
@@ -17,7 +20,11 @@ public class LoginController {
 		user = udi.selectUserByUsername(username);
 		System.out.println("Username from html is: " + username);
 		System.out.println("password in logincontroller, pulled from HTML is : " + password);
+		if(user==null) {
+			return "/html/Login.html";
+		}
 		if(user.getUserName().equals(username) && user.getPassWord().equals(password)) {
+//			log.info("User " + user.getUserName() + " has logged in.");
 			System.out.println("Passwords match");
 			request.getSession().setAttribute("User", user);
 			int roleId = user.getRoleId();
