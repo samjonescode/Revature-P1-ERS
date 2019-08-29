@@ -1,4 +1,8 @@
 DROP TABLE user_roles;
+SELECT * FROM reimbursement;
+SELECT * FROM users;
+TRUNCATE TABLE reimbursement;
+DELETE FROM reimbursement WHERE reimb_id=63;
 CREATE TABLE Users(
     user_id NUMBER PRIMARY KEY,
     user_name VARCHAR2(100) NOT NULL,
